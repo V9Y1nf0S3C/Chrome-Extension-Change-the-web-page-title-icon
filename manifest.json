@@ -1,0 +1,27 @@
+{
+"manifest_version": 2,
+"name": "V9",
+"description": "V9 Exp Extension",
+"version": "1.0",
+"content_scripts":[
+    {
+      "matches":[
+        "https://www.udemy.com/*"
+	  ],
+	  "js": ["content.js"]
+    }
+  ],
+"browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "hello.html"
+  },
+"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+"permissions": [
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/"
+  ]
+}
